@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Controle de Volume para YouTube</title>
+    <style>
+      body {
+        width: 200px;
+        height: 100px;
+        font-family: sans-serif;
+        font-size: 14px;
+        text-align: center;
+      }
+      h1 {
+        margin: 10px 0;
+        font-size: 16px;
+        font-weight: bold;
+      }
+      button {
+        padding: 10px;
+        background-color: #4285f4;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #3367d6;
+      }
+    </style>
     <script src="popup.js"></script>
   </head>
   <body>
-    <h1>Controle de Volume para YouTube</h1>
-    <div>
-      <label for="volume">Volume:</label>
-      <output id="volume-value">0</output>
-    </div>
+    <h1>YouTube Extension</h1>
+    <button id="download-btn">Download Video</button>   
   </body>
 </html>

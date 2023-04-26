@@ -1,1 +1,3 @@
-// Não há necessidade de nenhum código no arquivo background.js neste exemplo.
+chrome.action.onClicked.addListener(function (tab) {
+    chrome.tabs.sendMessage(tab.id, { action: "getVideoData" });
+  });

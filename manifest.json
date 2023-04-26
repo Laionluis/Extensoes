@@ -1,16 +1,13 @@
 {
   "manifest_version": 3,
-  "name": "Controle de volume do YouTube",
-  "description": "Permite controlar o volume do YouTube usando a roda de rolagem do mouse",
+  "name": "YouTube Extension",
+  "description": "Permite controlar o volume do YouTube usando a roda de rolagem do mouse e modo teatro.",
   "version": "1.0",
   "content_scripts": [
     {
-      "matches": [
-        "https://www.youtube.com/*"
-      ],
-      "js": [
-        "content.js"
-      ]
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "all_frames": true
     }
   ],
   "background": {
@@ -18,5 +15,18 @@
   },
   "action": {
     "default_popup": "popup.html"
-  }
+  },
+  "icons": {
+    "128": "youtube-extension-logo.png"
+  },
+  "permissions":  [
+    "storage",
+    "activeTab",
+    "scripting",
+    "downloads"
+  ],
+  "web_accessible_resources": [{
+    "resources": ["content.js"],
+    "matches": ["http://*/*", "https://*/*"]
+  }]
 }
