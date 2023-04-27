@@ -209,8 +209,10 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
       }
     }
   }
+
+  if (request.action == "pipVideo") {
+    document.querySelector('video').removeAttribute("disablepictureinpicture");
+    document.querySelector('video').requestPictureInPicture();    
+  }
 });
 
-async function iniciarPIPYoutube(){
-	await video.requestPictureInPicture();
-}
