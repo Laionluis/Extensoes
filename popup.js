@@ -21,7 +21,11 @@ document.addEventListener('DOMContentLoaded', function() {
       chrome.tabs.sendMessage(tabs[0].id, { action: "pipVideo" }, function (
         response
       ) {
-        console.log("Sucesso");
+        if (response && response.sucesso) {
+          console.log("Sucesso");
+        } else {
+          console.log("Unable to download video");
+        }
       });
     });
   });

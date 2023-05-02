@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "YouTube Extension",
-  "description": "Permite controlar o volume do YouTube usando a roda de rolagem do mouse e modo teatro.",
+  "description": "Improve your YouTube viewing experience with features like Cinema Mode and Mouse Wheel Volume Control!",
   "version": "1.0",
   "content_scripts": [
     {

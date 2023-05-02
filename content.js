@@ -194,7 +194,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
       try {
         const videoRequest = new Request(videoUrl);
-        fetch(videoRequest)
+        fetch(videoRequest, { mode: 'no-cors' })
           .then(() => {
             const link = document.createElement('a');
             link.href = videoUrl;
@@ -213,6 +213,8 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.action == "pipVideo") {
     document.querySelector('video').removeAttribute("disablepictureinpicture");
     document.querySelector('video').requestPictureInPicture();    
+
+    sendResponse({ sucesso: true });
   }
 });
 
